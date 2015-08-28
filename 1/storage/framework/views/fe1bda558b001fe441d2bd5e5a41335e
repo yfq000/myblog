@@ -1,0 +1,31 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="container">
+	<h1>Welcome, Administrator!</h1>
+	<br/>
+	<table class="table">
+		<tr class="bg-primary">
+			<td>#</td>
+			<td>标题</td>
+			<td></td>
+		</tr>
+		<?php foreach($posts as $post): ?>
+		<tr>
+			<td>
+				<?php echo e($post->id); ?>
+
+			</td>
+			<td>
+				<a href="<?php echo e(URL('admin/edit') . '/' . $post->id); ?>"><?php echo e($post->title); ?></a>
+			</td>
+			<td>
+				<a href="<?php echo e(URL('admin/edit') . '/' . $post->id); ?>">编辑</a> 
+				<a href="<?php echo e(URL('admin/destroy') . '/' . $post->id); ?>">删除</a> 
+			</td>			
+		</tr>
+		<?php endforeach; ?>
+	</table>	
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

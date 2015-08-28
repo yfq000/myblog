@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+h1{
+	font-family: Georgia;
+}
+
+.post-index{
+	border-bottom:1px dashed #E7E7E7;
+	margin-bottom:15px;
+	padding-bottom:5px;
+}
+.post-index .row{
+	margin:0;
+}
+.post-user i,.post-date i{
+	color:#999999;
+}
